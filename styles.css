@@ -1,0 +1,203 @@
+/*____________styling for form_____________*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+#foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-image: linear-gradient(skyblue, white);
+}
+
+.title{
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  font-size: 275%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  width: 18%;
+}
+
+#formBox {
+  width: 550px;
+  height: 400px;
+  background-color: white;
+  box-shadow: 5px 5px 5px grey;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formBlock {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 90%;
+  overflow: auto;
+}
+
+.button {
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  background-color: yellow;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {opacity: 1}
+
+/*_____________styling for game________________*/
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+#game{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+}
+#block{
+    width: 50px;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    left: 400px;
+    animation: block 7s infinite linear;
+}
+@keyframes block{
+    0%{left:100vw}
+    100%{left:-50px}
+}
+#hole{
+    width: 50px;
+    height: 160px;
+    background-color: white;
+    position: relative;
+    left: 100vw;
+    top: -500px;
+    animation: block 7s infinite linear;
+}
+#character{
+    width: 35px;
+    height: 35px;
+    background-image: url(duck2.png);
+    background-size: cover;
+    position: absolute;
+    top: 100px;
+}
+
+#score {
+  position: fixed;
+  top: 2vh;
+  left: 1vw;
+  color: gold;
+  font-family:'Press Start 2P', cursive;
+  font-size: 40px;
+  z-index: 10;
+}
+
+/*______________styling for final alert window________________*/
+
+#finalAlert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#finalAlert.showAlert {
+  display: flex;
+}
+  
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  font-size: 275%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  } 
+
+.button2 {
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  background-color: yellow;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  display: inline-block;
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#alertBox {
+  width: 500px;
+  height: 200px;
+  background-color: white;
+  box-shadow: 5px 5px 5px grey;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 90%;
+}
+
