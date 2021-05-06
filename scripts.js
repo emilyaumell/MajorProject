@@ -6,14 +6,14 @@ var character = document.getElementById("character");
 var jumping = 0;
 var counter = 0;
 
-// randomizes the hole in each block (adapted from: https://github.com/Beat0154/FlappyBird )
+// randomizes the hole in each block (lines 10-14 adapted from: https://github.com/Beat0154/FlappyBird )
 hole.addEventListener('animationiteration', () => {
     var random = -((Math.random()*70)+10);
     hole.style.top = random + "vh";
     counter++;
 });
 
-// sets game over when character touches top/side/bottom of blocks and holes (adapted from: https://github.com/Beat0154/FlappyBird )
+// sets game over when character touches top/side/bottom of blocks and holes (lines 17-24 adapted from: https://github.com/Beat0154/FlappyBird )
 setInterval(function(){
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     if(jumping==0){
@@ -51,7 +51,7 @@ setInterval(function(){
     }
 },10);
 
-// sets bpounds for jump count (adapted from: https://github.com/Beat0154/FlappyBird )
+// sets bpounds for jump count (lines 55-70 adapted from: https://github.com/Beat0154/FlappyBird )
 function jump(){
     jumping = 1;
     let jumpCount = 0;

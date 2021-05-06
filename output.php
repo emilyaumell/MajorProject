@@ -41,7 +41,8 @@ if ($_GET["bottomColor"]) {
 </head>
 
 <body>
-
+  
+  <!-- lines 46-50 adapted from https://github.com/Beat0154/FlappyBird -->
     <div id="game">
         <div id="block"></div>
         <div id="hole"></div>
