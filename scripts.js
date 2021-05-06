@@ -6,14 +6,14 @@ var character = document.getElementById("character");
 var jumping = 0;
 var counter = 0;
 
-// randomizes the hole in each block 
+// randomizes the hole in each block (adapted from: https://github.com/Beat0154/FlappyBird )
 hole.addEventListener('animationiteration', () => {
     var random = -((Math.random()*70)+10);
     hole.style.top = random + "vh";
     counter++;
 });
 
-// sets game over when character touches top/side/bottom of blocks and holes
+// sets game over when character touches top/side/bottom of blocks and holes (adapted from: https://github.com/Beat0154/FlappyBird )
 setInterval(function(){
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     if(jumping==0){
@@ -39,22 +39,19 @@ setInterval(function(){
           ) 
       ) 
     ) {
-        console.log("Game over. Score: "+(counter-1)); // new DOM on line 21 div element 
+        console.log("Game over. Score: "+(counter-1)); 
       
-    // here is where to output a final score
-      
+    //output a final alert for end of game   
       document.getElementById("finalAlert").classList.add("showAlert");
-      // add code to hide the vertical bar and the duck
       
-    
-      //document.getElementById("finalAlert").style.display = "visible";
-      // document.getElementById("").classList.add("yourshowCSS");
+    // add code to hide the vertical bar and the duck
       
         character.style.top = 100 + "px";
         counter=0;
     }
 },10);
-// sets bpounds for jump count
+
+// sets bpounds for jump count (adapted from: https://github.com/Beat0154/FlappyBird )
 function jump(){
     jumping = 1;
     let jumpCount = 0;
